@@ -1,0 +1,1 @@
+<?php	require('connect.php');		$PHPData = $_REQUEST["PHPData"];		$search_field = $PHPData[0];	$dd  = array('dds', $search_field, 1, "searchField");	include('dropdowns.php');  	mysqli_close($con); 

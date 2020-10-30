@@ -1,0 +1,1 @@
+<?php 	ini_set("allow_url_fopen", true);	set_time_limit(0);	$PHPData = $_REQUEST["PHPData"];	for ($i = 0; $i < count($PHPData); $i++) {		if (substr($PHPData[$i], 0, 4) != "http")			unlink("../" . $PHPData[$i]);	}?>

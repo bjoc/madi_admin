@@ -1,0 +1,170 @@
+@media all and (min-width: 1281px) {
+
+	.boxFix {width: 1280;}
+	.boxBig {width: 640;}
+		
+	#winObject {width: 100%;} 
+	
+	.boxSmall {width: 160;}	
+	.boxBook {width: 160;}
+	
+	#menu2 {display: none;}	
+	#menu1 {display: inline-block;}
+
+	#rotatorlinks {display: block;}
+
+}
+
+@media all and (max-width: 1280px) {
+
+	.boxFix {width: 100%;}
+	.boxBig {width: 50%;}
+
+	#winObject {width: 100%;} 
+	
+	.boxSmall {width: 12%;}
+	.boxBook {width: 12%;}
+		
+	#listboxtable {width: 100%;}
+
+	#listboxtable td {
+		background-size: 100%  100%;
+		width: 100%;
+	}
+	
+	#menu2 {display: none;}	
+	#menu1 {display: inline-block;}
+
+	#rotatorlinks {display: block;}
+}
+
+@media all and (min-width: 1025px) {
+
+	#rotator {
+		position: fixed;
+		display: block;
+		top: 58;
+		left: -5%;
+		width: 110%;
+		height: 700;
+	}
+}
+
+@media all and (max-width: 1023px) {
+
+	#br1 {display: none;}
+	.nav li a {font-size:12;}	
+    nav {text-align:right; }
+    
+    #popObjImg1 {display: none;}
+    #popObjImg2 {display: table-cell;}
+	#popObjImg3 {display: none;}
+}
+
+@media all and (max-width: 980px) {
+    #contSearchBar {margin-top: 0;}
+    #searchBarRetainer {height: 0;}
+    #searchpos {top:0;}
+}
+
+@media all and (max-width: 900px) {
+
+/* 	#searchBar1Small {width: 100%;} */
+	#searchBar1 li p {	font-size: 12px;}
+	#searchBar1 li {
+		width: 15%;
+	}
+	#searchBar1 li img {
+		padding:5px;
+	}		
+}
+
+@media all and (max-width: 767px) {
+
+	.kiadvany {width: 100%;}
+
+	#popObject {width: 100%;}
+
+	#rotatorlinks {display: none;}
+    
+	#menu1 {display: none;}	
+	#menu2 {display: inline-block;}
+    nav {text-align:right; }
+    
+    #winBanner, #winBanner2, #winBanner3, #contSearchbar {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none; 
+    }  
+    
+}
+
+@media all and (max-width: 640px) {
+
+	.boxBook {width: 24%;}
+	
+}
+
+@media all and (max-width: 619px) {
+	#searchBar1 li {
+		border-style: none;
+		float: left;
+	}
+	#searchBar1 li p {display: none;}
+	
+	#head_hullam {
+		width: 288px;
+		top: 52px;
+	}
+	
+	#head_logo {
+		width: 124px;
+	}
+	
+	#contSearchBar {height: 145;}	
+
+	.boxText[value='text1'] {display: none;}
+	
+	#head_szoveg {top:63; left:10; width: 150;}
+		    
+    #popObjImg1 {display: none;}
+    #popObjImg2 {display: none;}
+	#popObjImg3 {display: table-cell;}
+	#popObjectmainimg {max-height: inherit;}	
+	
+	#popOffer, #popLogin {width: 100%;}
+
+}
+
+@media all and (max-width: 525px) {
+
+	.boxSmall {width: 33%;}
+	
+	.boxBig {
+		width: 100%;
+	}
+				 	
+	
+	#popObjectmainimg {
+		width: 100%;
+		margin: 0;
+	}
+	
+	#popObject span {width: 98%}
+	
+	#popObject h1 {
+		margin: 0 0 auto;
+		width: 98%;
+		border-style: none;
+	}
+	
+	#contSearchbar p, #searchtxt, #mapBar p  {font-size: 10px;}	
+}
+
+@media all and (max-width: 320px) {
+
+	.boxBook {width: 48%;}
+	#contSearchbar p, #searchtxt  {font-size: 8px;}	
+
+	html {-webkit-text-size-adjust: none;}
+}
