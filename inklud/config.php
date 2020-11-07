@@ -10,8 +10,8 @@
 	define("HOST", "127.0.0.1");
 	define("USER", "root");
 	define("PASSWORD", "Dorina01");
-	$defaultdb 		= "tdm_velence";
-	$defaultdbName 	= "TDM Velence";
+	$defaultdb 		= "madi";
+	$defaultdbName 	= "Madi";
 
 
 
