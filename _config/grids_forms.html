@@ -10,7 +10,7 @@
 			"Mentés" {formSave(#_winID, '#content', #id);}
 			"Mégsem" {formClose(#_winID);}
 		</form_but>
-	</form>	
+	</form>
 </Default>
 
 <Bid>
@@ -19,10 +19,10 @@
 		<orderby> Bid_Code DESC </orderby>
 		<cols>
 			"ID" {id} id_type
-            "Kód" {Bid_Code} text 
+            "Kód" {Bid_Code} text
             "Státusz" {Bid_Status} checkbox
-            "Név" {Bid_Client_Name} text 
-            "Mail" {Bid_Client_Mail} text 
+            "Név" {Bid_Client_Name} text
+            "Mail" {Bid_Client_Mail} text
 		</cols>
 		<grid_but_copy>Default</grid_but_copy>
 	</grid>
@@ -33,16 +33,16 @@
 			<page> "Alapadatok"
 				<section>
 					"ID" {id} id_type
-					"Kód" {Bid_Code} text 
-					"Státusz" {Bid_Status} check default=(1) noempty 
+					"Kód" {Bid_Code} text
+					"Státusz" {Bid_Status} check default=(1) noempty
 					"Név" {Bid_Client_Name} text noempty title HUN
 					"Mail" {Bid_Client_Mail} text noempty HUN
-					"Érkezés" {Bid_ArriveDate} datetime 
-					"Éjszakák száma" {Bid_StayNights} num 
-					"Felnőttek száma" {Bid_Adults} num 
-					"Gyerekek száma" {Bid_Children} num 
-					"Gyerekek életkora" {Bid_ChildrenAge} text 
-					"Megjegyzés" {Bid_Comment} ck 
+					"Érkezés" {Bid_ArriveDate} datetime
+					"Éjszakák száma" {Bid_StayNights} num
+					"Felnőttek száma" {Bid_Adults} num
+					"Gyerekek száma" {Bid_Children} num
+					"Gyerekek életkora" {Bid_ChildrenAge} text
+					"Megjegyzés" {Bid_Comment} ck
 				</section>
 				<section>
 					"Weboldal" {Bid_Site_id} dds default=(#site)
@@ -51,16 +51,16 @@
 				</section>
 			</page>
 			<page> "Csatolt Objectumok"
-					<keyword> "Objectumok"  
+					<keyword> "Objectumok"
 						"Bid_id"
 						"Bid_Objects"
 						"Product_id"
 						"0"
 					</keyword>
 			</page>
-		</cols>		
+		</cols>
 		<form_but_copy>Default</form_but_copy>
-	</form>	
+	</form>
 </Bid>
 
 
@@ -91,9 +91,9 @@
 					"Csoport" {Dict_Tree_id} dds default=(1)
 				</section>
 			</page>
-		</cols>		
+		</cols>
 		<form_but_copy>Default</form_but_copy>
-	</form>	
+	</form>
 </Dict>
 
 <Site>
@@ -125,49 +125,49 @@
 					"Válaszmail" {Site_ReplyMail} text noempty
 				</section>
 				<section>
-					"SMTP cím" {Site_SMTPAddr} text 
-					"SMTP user" {Site_SMTPUsername} text 
-					"SMTP password" {Site_SMTPPassword} text 
-					"SMTP port" {Site_SMTPPort} text 
+					"SMTP cím" {Site_SMTPAddr} text
+					"SMTP user" {Site_SMTPUsername} text
+					"SMTP password" {Site_SMTPPassword} text
+					"SMTP port" {Site_SMTPPort} text
 					"SMTP auth" {Site_SMTPAuth} check default=(1)
-					"Levél egyszerre db" {Site_MailBulkSize} num default=(10) 
+					"Levél egyszerre db" {Site_MailBulkSize} num default=(10)
 					"Levél időköz sec" {Site_MailBulkInterval} num default=(5)
 				</section>
 			</page>
 			<page> "Alap SEO"
 				<section>
-					"Főoldal cím" {Site_SEOTitle} text					
-					"Főoldal leírás" {Site_SEODesc} ck 
+					"Főoldal cím" {Site_SEOTitle} text
+					"Főoldal leírás" {Site_SEODesc} ck
 				</section>
             </page>
 			<page> "Programok SEO"
 				<section>
-					"Programok cím" {Site_SEOTitle_Prog} text					
-					"Programok leírás" {Site_SEODesc_Prog} ck 
+					"Programok cím" {Site_SEOTitle_Prog} text
+					"Programok leírás" {Site_SEODesc_Prog} ck
 				</section>
             </page>
 			<page> "Szállás SEO"
 				<section>
-					"Szállás cím" {Site_SEOTitle_Szall} text					
-					"Szállás leírás" {Site_SEODesc_Szall} ck 
+					"Szállás cím" {Site_SEOTitle_Szall} text
+					"Szállás leírás" {Site_SEODesc_Szall} ck
 				</section>
             </page>
 			<page> "Gasztro SEO"
 				<section>
-					"Gasztro cím" {Site_SEOTitle_Gaszt} text					
-					"Gasztro leírás" {Site_SEODesc_Gaszt} ck 
+					"Gasztro cím" {Site_SEOTitle_Gaszt} text
+					"Gasztro leírás" {Site_SEODesc_Gaszt} ck
 				</section>
             </page>
 			<page> "Szolgáltatás SEO"
 				<section>
-					"Szolgáltatás cím" {Site_SEOTitle_Szolg} text					
-					"Szolgáltatás leírás" {Site_SEODesc_Szolg} ck 
+					"Szolgáltatás cím" {Site_SEOTitle_Szolg} text
+					"Szolgáltatás leírás" {Site_SEODesc_Szolg} ck
 				</section>
             </page>
 			<page> "Hírek SEO"
 				<section>
-					"Hírek cím" {Site_SEOTitle_Hirek} text					
-					"Hírek leírás" {Site_SEODesc_Hirek} ck 					
+					"Hírek cím" {Site_SEOTitle_Hirek} text
+					"Hírek leírás" {Site_SEODesc_Hirek} ck
 				</section>
             </page>
 		</cols>
@@ -204,11 +204,11 @@
 					"Keresztnév" {Client_ForName} text
 					"eMail" {Client_Email} text noempty
 					"Cégnév" {Client_Company} text
-					<line>		
+					<line>
 					"2014 díjtartozás" {Client_Fee_2014} text
 					"2015 díjtartozás" {Client_Fee_2015} text
 					"2016 díjtartozás" {Client_Fee_2016} text
-					<line>		
+					<line>
 					"Adószám" {Client_TaxNo} text
 					"Adószám EU" {Client_TaxNoEU} text
 					"Bank" {Client_BankName} text
@@ -247,9 +247,9 @@
 							"1"
 						</keyword>
 			</page>
-		</cols>		
+		</cols>
 		<form_but_copy>Default</form_but_copy>
-	</form>	
+	</form>
 </Usr>
 
 <Usr_Gro>
@@ -268,27 +268,6 @@
 		Usr
 	</form_copy>
 </Usr_Gro>
-
-<Usr_TDM>
-	<grid>
-		<sql> v_Client_Groups_grid WHERE Client_Site_id = #site and Client_Group_id = 10 </sql>
-		<orderby> id DESC </orderby>
-		<cols>
-			"ID" {id} id_type
-			"Felhasználó" {Client_Username} text
-			"Veznév" {Client_SurName} text
-			"Kernév" {Client_ForName} text
-			"Cég/Teljes név" {Client_Company} text 
-			"2014 díjtart" {Client_Fee_2014} text
-			"2015 díjtart" {Client_Fee_2015} text
-			"2016 díjtart" {Client_Fee_2016} text
-		</cols>
-		<grid_but_copy>Default</grid_but_copy>
-	</grid>
-	<form_copy>
-		Usr
-	</form_copy>
-</Usr_TDM>
 
 <Usr_Mai>
 	<grid>
@@ -357,16 +336,16 @@
 				<section>
 					"ID" {id} id_type
 					"Megnevezés" {Object_Name} text title noempty HUN
-					"Megnevezés" {Object_NameENG} text ENG						 
-					"Megnevezés" {Object_NameGER} text GER						 
-					"Kategória" {Main_Category_id} dds default=(91)									
-					"Aktív" {Object_Status} check default=(1) noempty							
-					"Érvényes" {Object_Date_Available} date default=(#date) half1					 					
-					"Érvényes" {Object_Date_Expire} date default=(#date_plus_year) half2					 			
-					"Dátumot mutat" {Object_IsShowDate} check default=(1) noempty				
-					"Dátum" {fromdate} date default=(#date) half1					 						
-					"Dátum" {todate} date default=(#date) half2					 					  					
-                    "Gazdája" {Object_Client_id} dds default=(#userID) 								
+					"Megnevezés" {Object_NameENG} text ENG
+					"Megnevezés" {Object_NameGER} text GER
+					"Kategória" {Main_Category_id} dds default=(91)
+					"Aktív" {Object_Status} check default=(1) noempty
+					"Érvényes" {Object_Date_Available} date default=(#date) half1
+					"Érvényes" {Object_Date_Expire} date default=(#date_plus_year) half2
+					"Dátumot mutat" {Object_IsShowDate} check default=(1) noempty
+					"Dátum" {fromdate} date default=(#date) half1
+					"Dátum" {todate} date default=(#date) half2
+                    "Gazdája" {Object_Client_id} dds default=(#userID)
 					"Weboldal" {Object_Site_id} dds default=(#site)
 				</section>
 				<section>
@@ -374,7 +353,7 @@
 					"Módosítva" {Object_Modified_at} datetime default=(#datetime) noedit
 					"Módosító" {Object_Modified_by} dds default=(#userID) noedit
 				</section>
-			</page> 
+			</page>
 			<page> "Kategóriák"
 						<keyword> "Kategóriák"
 							"Object_id"
@@ -400,8 +379,8 @@
 							"Gallery_Order"
 							"3"
 						</join_param>
-						"Média típus" {Gallery_Type_id} dds default=(1)							
-						"Média src" {Gallery_Src} image											 
+						"Média típus" {Gallery_Type_id} dds default=(1)
+						"Média src" {Gallery_Src} image
 					</join>
 				</section>
 			</page>
@@ -426,42 +405,6 @@
 		Obj
 	</form_copy>
 </Obj_Sza>
-
-<Obj_Ven>
-	<grid>
-		<sql> Object WHERE Main_Category_id=98 AND Object_Site_id = #site </sql>
-		<orderby_copy>Obj</orderby_copy>
-		<cols_copy>Obj</cols_copy>
-		<grid_but_copy>Default</grid_but_copy>
-	</grid>
-	<form_copy>
-		Obj
-	</form_copy>
-</Obj_Ven>
-
-<Obj_Lat>
-	<grid>
-		<sql> Object WHERE Main_Category_id=95 AND Object_Site_id = #site </sql>
-		<orderby_copy>Obj</orderby_copy>
-		<cols_copy>Obj</cols_copy>
-		<grid_but_copy>Default</grid_but_copy>
-	</grid>
-	<form_copy>
-		Obj
-	</form_copy>
-</Obj_Lat>
-
-<Obj_Szo>
-	<grid>
-		<sql> Object WHERE Main_Category_id=99 AND Object_Site_id = #site </sql>
-		<orderby_copy>Obj</orderby_copy>
-		<cols_copy>Obj</cols_copy>
-		<grid_but_copy>Default</grid_but_copy>
-	</grid>
-	<form_copy>
-		Obj
-	</form_copy>
-</Obj_Szo>
 
 <Obj_Has>
 	<grid>
@@ -490,57 +433,57 @@
 				<section>
 					"ID" {id} id_type
 					"Megnevezés" {Object_Name} text title noempty HUN
-					"Megnevezés" {Object_NameENG} text ENG						 
-					"Megnevezés" {Object_NameGER} text GER						 
-					"Kategória" {Main_Category_id} dds default=(1)									
-					"Aktív" {Object_Status} check default=(1) noempty							
-					"Érvényes" {Object_Date_Available} date default=(#date) half1					 					
-					"Érvényes" {Object_Date_Expire} date default=(#date_plus_year) half2					 			
-					"Dátumot mutat" {Object_IsShowDate} check default=(1) noempty				
-					"Dátum" {fromdate} date default=(#date) half1					 						
-					"Dátum" {todate} date default=(#date) half2					 					  					"Gazdája" {Object_Client_id} dds default=(#userID) 								
-		  			"Szülő"	{Object_Master_id} dds	 						
+					"Megnevezés" {Object_NameENG} text ENG
+					"Megnevezés" {Object_NameGER} text GER
+					"Kategória" {Main_Category_id} dds default=(1)
+					"Aktív" {Object_Status} check default=(1) noempty
+					"Érvényes" {Object_Date_Available} date default=(#date) half1
+					"Érvényes" {Object_Date_Expire} date default=(#date_plus_year) half2
+					"Dátumot mutat" {Object_IsShowDate} check default=(1) noempty
+					"Dátum" {fromdate} date default=(#date) half1
+					"Dátum" {todate} date default=(#date) half2					 					  					"Gazdája" {Object_Client_id} dds default=(#userID)
+		  			"Szülő"	{Object_Master_id} dds
 					"Weboldal" {Object_Site_id} dds default=(#site)
 				</section>
 				<section>
-					"Irányítószám" {Object_Postcode} text default=(2481)								
-					"Helység" {Object_Settlement} text default=(Velence)								
-					"Cím" {Object_Addresse} text	 									
-					"eMail" {Object_Email} text	 									
-					"Telefon" {Object_Phone} text	 									
-					"Facebook" {Object_Facebook} text										
+					"Irányítószám" {Object_Postcode} text default=(2481)
+					"Helység" {Object_Settlement} text default=(Velence)
+					"Cím" {Object_Addresse} text
+					"eMail" {Object_Email} text
+					"Telefon" {Object_Phone} text
+					"Facebook" {Object_Facebook} text
 					"Létrehozva" {Object_Created} datetime default=(#datetime) noedit
 					"Módosítva" {Object_Modified_at} datetime default=(#datetime) noedit
 					"Módosító" {Object_Modified_by} dds default=(#userID) noedit
 				</section>
-			</page> 
+			</page>
 			<page> "Kiemelés"
 				<section>
-					"Hír?" {Object_IsNews} check default=(1)						
-					"Hír(től)" {Object_News_From} date default=(#date)						
-					"Hír(ig)" {Object_News_Till} date default=(#date_plus_year)						
-					<line>		
-					"TOP?" {Object_IsTop} check default=(0)								
-					"TOP(től)" {Object_Top_From} date default=(#date)						
-					"TOP(ig)" {Object_Top_Till} date default=(#date_plus_year)						
+					"Hír?" {Object_IsNews} check default=(1)
+					"Hír(től)" {Object_News_From} date default=(#date)
+					"Hír(ig)" {Object_News_Till} date default=(#date_plus_year)
+					<line>
+					"TOP?" {Object_IsTop} check default=(0)
+					"TOP(től)" {Object_Top_From} date default=(#date)
+					"TOP(ig)" {Object_Top_Till} date default=(#date_plus_year)
 				</section>
-			</page>						
+			</page>
 			<page> "Képek"
 				<section>
 					"Kiskép" {Object_List_Image_Small} image noempty
 				</section>
-				<section>	
-					"Nagykép" {Object_List_Image} image noempty	
+				<section>
+					"Nagykép" {Object_List_Image} image noempty
 				</section>
 			</page>
 			<page> "Banner"
 				<section>
-					"Banner?" {Object_IsBanner} check default=(0)								
-					"Fő banner?" {Object_IsMainBanner} check default=(0)								
-					"Banner(től)" {Object_Banner_From} date default=(#date)						
-					"Banner(ig)" {Object_Banner_Till} date default=(#date_plus_year)						
+					"Banner?" {Object_IsBanner} check default=(0)
+					"Fő banner?" {Object_IsMainBanner} check default=(0)
+					"Banner(től)" {Object_Banner_From} date default=(#date)
+					"Banner(ig)" {Object_Banner_Till} date default=(#date_plus_year)
 				</section>
-				<section>	
+				<section>
 					"Banner kép" {Object_Banner_Image} image noempty
 				</section>
 			</page>
@@ -554,27 +497,27 @@
 							"Media_Order"
 							"3"
 						</join_param>
-						"Média sorszám" {Media_Order} text noempty					 
-						"Média típus" {Media_Type_id} dds default=(1)							
-						"Média src" {Media_Src} image											 
+						"Média sorszám" {Media_Order} text noempty
+						"Média típus" {Media_Type_id} dds default=(1)
+						"Média src" {Media_Src} image
 					</join>
 				</section>
 			</page>
 			<page> "Térkép"
 				<section>
-					"GeoX" {Object_Map_Lat} mapX default=(47.2067) noempty					
+					"GeoX" {Object_Map_Lat} mapX default=(47.2067) noempty
 					"GeoY" {Object_Map_Long} mapY_200% default=(18.6291) noempty
 				</section>
-			</page>	
+			</page>
 			<page> "Leírás"
 				<section>
-					"Rövid leírás" {Object_Short_Description} ck noempty half_cke HUN					
-					"Rövid leírás" {Object_Short_DescriptionENG} ck half_cke ENG					
+					"Rövid leírás" {Object_Short_Description} ck noempty half_cke HUN
+					"Rövid leírás" {Object_Short_DescriptionENG} ck half_cke ENG
 					"Rövid leírás" {Object_Short_DescriptionGER} ck half_cke GER
 				</section>
 				<section>
-					"Hosszú leírás" {Object_Description} ck noempty half_cke HUN					
-					"Hosszú leírás" {Object_DescriptionENG} ck half_cke ENG					
+					"Hosszú leírás" {Object_Description} ck noempty half_cke HUN
+					"Hosszú leírás" {Object_DescriptionENG} ck half_cke ENG
 					"Hosszú leírás" {Object_DescriptionGER} ck half_cke GER
 				</section>
 			</page>
@@ -583,15 +526,15 @@
 							"Object_id"
 							"Object_Keywords"
 							"Keyword_id"
-							"#keyw"
+							"200"
 						</keyword>
 			</page>
 			<page> "SEO"
 				<section>
-					"SEO cím" {Object_SEOTitle} text					
+					"SEO cím" {Object_SEOTitle} text
 				</section>
 				<section>
-					"SEO leírás" {Object_SEODesc} ck half_cke					
+					"SEO leírás" {Object_SEODesc} ck half_cke
 				</section>
 			</page>
 		</cols>
@@ -613,7 +556,7 @@
 			"Megnevezés" {Object_Name} text
 			"Aktív" {Object_Status} checkbox
 			"Kategória" {Main_Category_id} ddl
-			"Fő banner?" {Object_IsMainBanner} checkbox								
+			"Fő banner?" {Object_IsMainBanner} checkbox
 			"Banner(től)" {Object_Banner_From} date
 			"Banner(ig)" {Object_Banner_Till} date
 			"Érvényes(től)" {Object_Date_Available} date
@@ -715,68 +658,58 @@
 				<section>
 					"ID" {id} id_type
 					"Megnevezés" {Object_Name} text title noempty HUN
-					"Megnevezés" {Object_NameENG} text ENG						 
-					"Megnevezés" {Object_NameGER} text GER						 
-					"Kategória" {Main_Category_id} dds default=(91)									
-					"Aktív" {Object_Status} check default=(1) noempty							
-					"Érvényes" {Object_Date_Available} date default=(#date) half1					 					
-					"Érvényes" {Object_Date_Expire} date default=(#date_plus_year) half2					 			
-					"Dátumot mutat" {Object_IsShowDate} check default=(1) noempty				
-					"Dátum" {fromdate} date default=(#date) half1					 						
-					"Dátum" {todate} date default=(#date) half2					 					  					"Gazdája" {Object_Client_id} dds default=(#userID) 								
-		  			"Szülő"	{Object_Master_id} dds	 						
+					"Megnevezés" {Object_NameENG} text ENG
+					"Megnevezés" {Object_NameGER} text GER
+					"Kategória" {Main_Category_id} dds default=(91)
+					"Aktív" {Object_Status} check default=(1) noempty
+					"Érvényes" {Object_Date_Available} date default=(#date) half1
+					"Érvényes" {Object_Date_Expire} date default=(#date_plus_year) half2
+					"Dátumot mutat" {Object_IsShowDate} check default=(1) noempty
+					"Dátum" {fromdate} date default=(#date) half1
+					"Dátum" {todate} date default=(#date) half2					 					  					"Gazdája" {Object_Client_id} dds default=(#userID)
+		  			"Szülő"	{Object_Master_id} dds
 					"Weboldal" {Object_Site_id} dds default=(#site)
 				</section>
 				<section>
-					"Irányítószám" {Object_Postcode} text default=(2481)								
-					"Helység" {Object_Settlement} text default=(Velence)								
-					"Cím" {Object_Addresse} text	 									
-					"eMail" {Object_Email} text	 									
-					"Telefon" {Object_Phone} text	 									
-					"Facebook" {Object_Facebook} text										
+					"Irányítószám" {Object_Postcode} text default=(2481)
+					"Helység" {Object_Settlement} text default=(Velence)
+					"Cím" {Object_Addresse} text
+					"eMail" {Object_Email} text
+					"Telefon" {Object_Phone} text
+					"Facebook" {Object_Facebook} text
 					"Létrehozva" {Object_Created} datetime default=(#datetime) noedit
 					"Módosítva" {Object_Modified_at} datetime default=(#datetime) noedit
 					"Módosító" {Object_Modified_by} dds default=(#userID) noedit
 				</section>
-			</page> 
-			<page> "Kategóriák"
-						<keyword> "Kategóriák"
-							"Object_id"
-							"Object_Cats"
-							"Object_Cat_id"
-							"1"
-							"kot"
-							"91"
-						</keyword>
 			</page>
 			<page> "Kiemelés"
 				<section>
-					"Hír?" {Object_IsNews} check default=(0)								
-					"Hír(től)" {Object_News_From} date default=(#date)						
-					"Hír(ig)" {Object_News_Till} date default=(#date_plus_year)						
-					<line>		
-					"TOP?" {Object_IsTop} check default=(0)								
-					"TOP(től)" {Object_Top_From} date default=(#date)						
-					"TOP(ig)" {Object_Top_Till} date default=(#date_plus_year)						
+					"Hír?" {Object_IsNews} check default=(0)
+					"Hír(től)" {Object_News_From} date default=(#date)
+					"Hír(ig)" {Object_News_Till} date default=(#date_plus_year)
+					<line>
+					"TOP?" {Object_IsTop} check default=(0)
+					"TOP(től)" {Object_Top_From} date default=(#date)
+					"TOP(ig)" {Object_Top_Till} date default=(#date_plus_year)
 				</section>
-			</page>						
+			</page>
 			<page> "Képek"
 				<section>
 					"Kiskép" {Object_List_Image_Small} image noempty
 				</section>
-				<section>	
-					"Nagykép" {Object_List_Image} image noempty	
+				<section>
+					"Nagykép" {Object_List_Image} image noempty
 				</section>
 			</page>
 			<page> "Banner"
 				<section>
-					"Banner?" {Object_IsBanner} check default=(0)								
-					"Fő banner?" {Object_IsMainBanner} check default=(0)								
-					"Banner(től)" {Object_Banner_From} date default=(#date)						
-					"Banner(ig)" {Object_Banner_Till} date default=(#date_plus_year)						
+					"Banner?" {Object_IsBanner} check default=(0)
+					"Fő banner?" {Object_IsMainBanner} check default=(0)
+					"Banner(től)" {Object_Banner_From} date default=(#date)
+					"Banner(ig)" {Object_Banner_Till} date default=(#date_plus_year)
 					"Banner url" {Object_Banner_Url} text
 				</section>
-				<section>	
+				<section>
 					"Banner kép" {Object_Banner_Image} image noempty
 				</section>
 			</page>
@@ -790,44 +723,42 @@
 							"Media_Order"
 							"3"
 						</join_param>
-						"Média sorszám" {Media_Order} text noempty					 
-						"Média típus" {Media_Type_id} dds default=(1)							
-						"Média src" {Media_Src} image											 
+						"Média sorszám" {Media_Order} text noempty
+						"Média típus" {Media_Type_id} dds default=(1)
+						"Média src" {Media_Src} image
 					</join>
 				</section>
 			</page>
 			<page> "Térkép"
 				<section>
-					"GeoX" {Object_Map_Lat} mapX default=(47.2067) noempty					
+					"GeoX" {Object_Map_Lat} mapX default=(47.2067) noempty
 					"GeoY" {Object_Map_Long} mapY_200% default=(18.6291) noempty
 				</section>
-			</page>	
+			</page>
 			<page> "Leírás"
 				<section>
-					"Rövid leírás" {Object_Short_Description} ck noempty half_cke HUN					
-					"Rövid leírás" {Object_Short_DescriptionENG} ck half_cke ENG					
-					"Rövid leírás" {Object_Short_DescriptionGER} ck half_cke GER
+					"Rövid leírás" {Object_Short_Description} ck noempty half_cke HUN
+					"Rövid leírás" {Object_Short_DescriptionENG} ck half_cke ENG
 				</section>
 				<section>
-					"Hosszú leírás" {Object_Description} ck noempty half_cke HUN					
-					"Hosszú leírás" {Object_DescriptionENG} ck half_cke ENG					
-					"Hosszú leírás" {Object_DescriptionGER} ck half_cke GER
+					"Hosszú leírás" {Object_Description} ck noempty half_cke HUN
+					"Hosszú leírás" {Object_DescriptionENG} ck half_cke ENG
 				</section>
 			</page>
 			<page> "Kulcsszavak"
 						<keyword> "Kulcsszavak"
 							"Object_id"
-							"Object_Keywords"
+							"object_keywords"
 							"Keyword_id"
-							"#keyw"
+							"200"
 						</keyword>
 			</page>
 			<page> "SEO"
 				<section>
-					"SEO cím" {Object_SEOTitle} text					
+					"SEO cím" {Object_SEOTitle} text
 				</section>
 				<section>
-					"SEO leírás" {Object_SEODesc} ck half_cke					
+					"SEO leírás" {Object_SEODesc} ck half_cke
 				</section>
 			</page>
 		</cols>
@@ -917,7 +848,7 @@
 					"Szövegtörzs" {News_Body} ck
 			</page>
 			<page> "Levelezési csoportok"
-					<keyword> "Csoport" 
+					<keyword> "Csoport"
 						"News_id"
 						"News_MailGroups"
 						"Client_Mailgroup_id"
@@ -927,14 +858,14 @@
 					</keyword>
 			</page>
 			<page> "Csatolt Objectumok"
-					<keyword> "Objectumok"  
+					<keyword> "Objectumok"
 						"News_id"
 						"News_Objects"
 						"Object_id"
 						"0"
 					</keyword>
 			</page>
-		</cols>		
+		</cols>
 		<form_but>
 			"Mentés" {formSave(#_winID, '#content', #id);}
 			"Előnézet" {mailSend('NU', #id, #userID, '', 'Minta elküldve a mailcímedre');"}
@@ -944,8 +875,8 @@
 		</form_but>
 	</form>
 </New>
-		
-		
+
+
 <New_Tem>
 	<grid>
 		<sql> Template </sql>
@@ -986,7 +917,7 @@
 			<page> "Lábléc"
 					"Lábléc" {Template_Footer} textarea
 			</page>
-		</cols>		
+		</cols>
 		<form_but>
 			"Mentés" {formSave(#_winID, '#content', #id);}
 			"Előnézet" {mailSend('TU', #id, #userID, '', 'Sablon elküldve a mailcímedre');"}
@@ -994,4 +925,3 @@
 		</form_but>
 	</form>
 </New_Tem>
-		

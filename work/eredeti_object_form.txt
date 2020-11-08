@@ -1,0 +1,156 @@
+<Obj>
+	<grid>
+		<sql> Object WHERE Object_Site_id = #site </sql>
+		<orderby> Object.id DESC </orderby>
+		<cols>
+			"ID" {id} id_type
+			"Megnevezés" {Object_Name} text
+			"Aktív" {Object_Status} checkbox
+
+			"Kategória" {Main_Category_id} ddl
+			"Dátum(tól)" {fromdate} date
+			"Dátum(ig)" {todate} date
+			"Érvényes(től)" {Object_Date_Available} date
+			"Érvényes(ig)" {Object_Date_Expire} date
+			"Hír?" {Object_IsNews} checkbox
+			"Hír(től)" {Object_News_From} date
+			"Hír(ig)" {Object_News_Till} date
+ 			"TOP?" {Object_IsTop} checkbox
+			"TOP(től)" {Object_Top_From} date
+			"TOP(ig)" {Object_Top_Till} date
+		</cols>
+		<grid_but_copy>Default</grid_but_copy>
+		<inactive_row>Object_Status</inactive_row>
+	</grid>
+	<form>
+		<sql> Object </sql>
+		<whe> WHERE Object.id = #id </whe>
+		<cols>
+			<page> "Alapadatok"
+				<section>
+					"ID" {id} id_type
+					"Megnevezés" {Object_Name} text title noempty HUN
+					"Megnevezés" {Object_NameENG} text ENG
+					"Megnevezés" {Object_NameGER} text GER
+					"Kategória" {Main_Category_id} dds default=(91)
+					"Aktív" {Object_Status} check default=(1) noempty
+					"Érvényes" {Object_Date_Available} date default=(#date) half1
+					"Érvényes" {Object_Date_Expire} date default=(#date_plus_year) half2
+					"Dátumot mutat" {Object_IsShowDate} check default=(1) noempty
+					"Dátum" {fromdate} date default=(#date) half1
+					"Dátum" {todate} date default=(#date) half2					 					  					"Gazdája" {Object_Client_id} dds default=(#userID)
+		  			"Szülő"	{Object_Master_id} dds
+					"Weboldal" {Object_Site_id} dds default=(#site)
+				</section>
+				<section>
+					"Irányítószám" {Object_Postcode} text default=(2481)
+					"Helység" {Object_Settlement} text default=(Velence)
+					"Cím" {Object_Addresse} text
+					"eMail" {Object_Email} text
+					"Telefon" {Object_Phone} text
+					"Facebook" {Object_Facebook} text
+					"Létrehozva" {Object_Created} datetime default=(#datetime) noedit
+					"Módosítva" {Object_Modified_at} datetime default=(#datetime) noedit
+					"Módosító" {Object_Modified_by} dds default=(#userID) noedit
+				</section>
+			</page>
+			<page> "Kategóriák"
+						<keyword> "Kategóriák"
+							"Object_id"
+							"Object_Cats"
+							"Object_Cat_id"
+							"1"
+							"kot"
+							"91"
+						</keyword>
+			</page>
+			<page> "Kiemelés"
+				<section>
+					"Hír?" {Object_IsNews} check default=(0)
+					"Hír(től)" {Object_News_From} date default=(#date)
+					"Hír(ig)" {Object_News_Till} date default=(#date_plus_year)
+					<line>
+					"TOP?" {Object_IsTop} check default=(0)
+					"TOP(től)" {Object_Top_From} date default=(#date)
+					"TOP(ig)" {Object_Top_Till} date default=(#date_plus_year)
+				</section>
+			</page>
+			<page> "Képek"
+				<section>
+					"Kiskép" {Object_List_Image_Small} image noempty
+				</section>
+				<section>
+					"Nagykép" {Object_List_Image} image noempty
+				</section>
+			</page>
+			<page> "Banner"
+				<section>
+					"Banner?" {Object_IsBanner} check default=(0)
+					"Fő banner?" {Object_IsMainBanner} check default=(0)
+					"Banner(től)" {Object_Banner_From} date default=(#date)
+					"Banner(ig)" {Object_Banner_Till} date default=(#date_plus_year)
+					"Banner url" {Object_Banner_Url} text
+				</section>
+				<section>
+					"Banner kép" {Object_Banner_Image} image noempty
+				</section>
+			</page>
+			<page> "Csatolt média"
+				<section>
+					<join> "Media"
+						<join_param>
+							"Object_id"
+							"Object_Media"
+							"Object_id"
+							"Media_Order"
+							"3"
+						</join_param>
+						"Média sorszám" {Media_Order} text noempty
+						"Média típus" {Media_Type_id} dds default=(1)
+						"Média src" {Media_Src} image
+					</join>
+				</section>
+			</page>
+			<page> "Térkép"
+				<section>
+					"GeoX" {Object_Map_Lat} mapX default=(47.2067) noempty
+					"GeoY" {Object_Map_Long} mapY_200% default=(18.6291) noempty
+				</section>
+			</page>
+			<page> "Leírás"
+				<section>
+					"Rövid leírás" {Object_Short_Description} ck noempty half_cke HUN
+					"Rövid leírás" {Object_Short_DescriptionENG} ck half_cke ENG
+					"Rövid leírás" {Object_Short_DescriptionGER} ck half_cke GER
+				</section>
+				<section>
+					"Hosszú leírás" {Object_Description} ck noempty half_cke HUN
+					"Hosszú leírás" {Object_DescriptionENG} ck half_cke ENG
+					"Hosszú leírás" {Object_DescriptionGER} ck half_cke GER
+				</section>
+			</page>
+			<page> "Kulcsszavak"
+						<keyword> "Kulcsszavak"
+							"Object_id"
+							"Object_Keywords"
+							"Keyword_id"
+							"#keyw"
+						</keyword>
+			</page>
+			<page> "SEO"
+				<section>
+					"SEO cím" {Object_SEOTitle} text
+				</section>
+				<section>
+					"SEO leírás" {Object_SEODesc} ck half_cke
+				</section>
+			</page>
+		</cols>
+		<form_but>
+			"Mentés" {formSave(#_winID, '#content', #id);}
+			"Másolat" {formSave(#_winID, '#content', #id, 'Object_Name', 'Object_Status');}
+			"Törlés" {formDel(#_winID, 'Object', #id, ['Object_List_Image_Small', 'Object_List_Image'],[['Object_Media','Object_id',['Media_Src']]], [['Object_Media','Object_id'],['Object_Keywords','Object_id'],['Object_Period','Object_id']]);}
+			"Mégsem" {formClose(#_winID);}
+		</form_but>
+	</form>
+</Obj>
